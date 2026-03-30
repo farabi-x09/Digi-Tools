@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-const Cart = ({setActiveTab }) => {
+const Cart = ({setActiveTab,cartItems }) => {
     
  
 
@@ -19,7 +19,7 @@ const Cart = ({setActiveTab }) => {
                             <input type="radio" name="my_tabs_1" className="tab w-40 rounded-full [--tab-bg:#4F39F6] border-2 text-black checked:text-white  border-purple-500" aria-label="Products" defaultChecked
                             onClick={()=> setActiveTab("model")} />
 
-                            <input type="radio" name="my_tabs_1" className="tab w-40 rounded-full [--tab-bg:#4F39F6]   border-2  text-black checked:text-white border-purple-500" aria-label="Cart "
+                            <input type="radio" name="my_tabs_1" className="tab w-40 rounded-full [--tab-bg:#4F39F6]   border-2  text-black checked:text-white border-purple-500" aria-label={`cart (${cartItems.length})`}
                             onClick={()=> setActiveTab("cart")} />
 
                         </div>

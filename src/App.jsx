@@ -17,23 +17,25 @@ const getData = async () => {
 function App() {
   const dataPromise = getData()
   const [activeTab, setActiveTab] = useState("model");
+  const [cartItems, setCartItems] = useState([]);
+  // console.log(cartItems);
   // console.log(activeTab);
   return (
     <>
-      <Navber></Navber>
+      <Navber cartItems={cartItems}></Navber>
       <Banner></Banner>
       <Count></Count>
 
-      
-        <Cart dataPromise={dataPromise} setActiveTab={setActiveTab}></Cart>
-     
+
+      <Cart dataPromise={dataPromise} cartItems={cartItems} setActiveTab={setActiveTab}></Cart>
+
 
       <Suspense fallback={<div className=' mt-20 text-center text-3xl font-bold'>Loading...</div>}>
-        {activeTab === 'model' && <CartItems dataPromise={dataPromise}></CartItems>}
+        {activeTab === 'model' && <CartItems cartItems={cartItems} setCartItems={setCartItems} dataPromise={dataPromise}></CartItems>}
       </Suspense>
 
 
-      {activeTab === 'cart' && <ShowCart></ShowCart>}
+      {activeTab === 'cart' && <ShowCart cartItems={cartItems} setCartItems={setCartItems}></ShowCart>}
 
     </>
   )

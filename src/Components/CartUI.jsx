@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Check } from 'lucide-react';
+import { toast } from 'react-toastify';
 
-const CartUI = ({ item }) => {
+const CartUI = ({ item, cartItems, setCartItems }) => {
     const tagStyle = {
         popular: "text-purple-500 border-purple-500 bg-purple-100",
         "best seller": "text-green-500 border-green-500 bg-green-100",
@@ -10,8 +11,14 @@ const CartUI = ({ item }) => {
     const [buy, setBuy] = useState(false);
     const hendleBuy = () => {
         setBuy(true)
-        console.log("cliked");
-       
+        const isExist = cartItems.find(cart => cart.id === item.id);
+        if (isExist) {
+            toast.error("Product already in cart!")
+            return;
+        }
+        setCartItems([...cartItems, item])
+        toast.success("Product added to cart successfully!")
+
 
     }
     return (
