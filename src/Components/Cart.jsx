@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { use } from 'react';
 
-const Cart = () => {
+const Cart = ({ dataPromise }) => {
+    const data = use(dataPromise)
+    console.log(data);
     return (
         <div>
             <div className='container mx-auto my-20 '>
@@ -16,6 +18,16 @@ const Cart = () => {
 
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    {
+                        data.map(item => <div key={item.id} className=''>
+                            <div>
+                                <img className='w-50' src={item.icon} alt={item.name} />
+                            </div>
+                        </div>)
+                    }
                 </div>
             </div>
         </div>
