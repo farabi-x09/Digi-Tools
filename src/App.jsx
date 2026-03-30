@@ -1,6 +1,7 @@
 
 import './App.css'
 import Banner from './Components/Banner'
+import Cart from './Components/Cart'
 import Count from './Components/Count'
 import Navber from './Components/Navber'
 
@@ -12,6 +13,7 @@ function App() {
     <Navber></Navber>
     <Banner></Banner>
     <Count></Count>
+    <Cart></Cart>
     </>
   )
 }
