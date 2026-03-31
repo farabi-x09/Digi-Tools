@@ -32,7 +32,7 @@ const Navber = ({cartItems}) => {
                 </div>
                 <div className='flex space-x-5 items-center'>
                     <div className='relative'>
-                        <ShoppingCart></ShoppingCart> <span className='bg-red-500 text-white rounded-full px-2 py-1 text-sm absolute -top-4 left-4'>{cartItems.length}</span>
+                        <ShoppingCart></ShoppingCart>{cartItems.length > 0 ? <span className='bg-red-500 text-white rounded-full px-2 py-1 text-sm absolute -top-4 left-4'>{cartItems.length}</span> : null} 
                     </div>
                     <div>
                         <p className='font-semibold'>Login</p>

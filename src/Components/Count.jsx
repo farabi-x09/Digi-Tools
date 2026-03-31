@@ -9,10 +9,12 @@ const Count = () => {
                         <h3 className='text-5xl md:text-6xl font-bold'>50k+</h3>
                         <p className='text-md md:text-2xl mt-2 text-taupe-300'>Active Users</p>
                     </div>
+                  <div className="divider divider-neutral  divider-horizontal hidden md:flex opacity-30"></div>
                     <div className='text-center'>
                         <h3 className='text-5xl md:text-6xl font-bold'>200+</h3>
                         <p className='text-md md:text-2xl mt-2 text-taupe-300'>Premium Tools</p>
                     </div>
+                    <div className="divider divider-neutral  divider-horizontal hidden md:flex opacity-30"></div>
                     <div className='text-center'>
                         <h3 className='text-5xl md:text-6xl font-bold'>4.9+</h3>
                         <p className='text-md md:text-2xl mt-2 text-taupe-300'>Rating</p>

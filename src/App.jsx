@@ -9,6 +9,8 @@ import ShowCart from './Components/ShowCart'
 import CartItems from './Components/CartItems'
 import GetStarted from './Components/GetStarted'
 import Simple from './Components/Simple'
+import Ready from './Components/Ready'
+import Footer from './Components/Footer'
 
 
 const getData = async () => {
@@ -41,6 +43,8 @@ function App() {
 
       <GetStarted></GetStarted>
       <Simple></Simple>
+      <Ready></Ready>
+      <Footer></Footer>
 
     </>
   )
