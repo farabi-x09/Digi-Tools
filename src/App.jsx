@@ -8,6 +8,7 @@ import Navber from './Components/Navber'
 import ShowCart from './Components/ShowCart'
 import CartItems from './Components/CartItems'
 import GetStarted from './Components/GetStarted'
+import Simple from './Components/Simple'
 
 
 const getData = async () => {
@@ -39,6 +40,7 @@ function App() {
       {activeTab === 'cart' && <ShowCart cartItems={cartItems} setCartItems={setCartItems}></ShowCart>}
 
       <GetStarted></GetStarted>
+      <Simple></Simple>
 
     </>
   )
